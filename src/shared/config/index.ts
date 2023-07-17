@@ -5,6 +5,8 @@
  * @module
  */
 
+import * as process from "process";
+
 /**
  * Получение env-переменной
  * @throwable
@@ -18,7 +20,7 @@ const getEnvVar = (key: string) => {
 };
 
 /** API entrypoint */
-export const API_URL = "https://jsonplaceholder.typicode.com";
+export const API_URL = getEnvVar("REACT_APP_API_URL");
 
 
 /** Режим запуска программы */
